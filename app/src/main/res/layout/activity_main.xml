@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+Add the following line to be able to define seekarc: in the tag
+<com.com.triggertrap.seekarc.SeekArc
+this line is a MUST.
+
+    xmlns:seekarc="http://schemas.android.com/apk/res-auto"
+
+the line must be added to the root tag.
+-->
+
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+
+    tools:context="com.jativa.ramiro.watercontroller.MainActivity"
+
+    xmlns:seekarc="http://schemas.android.com/apk/res-auto">
+
+    <com.hitomi.cmlibrary.CircleMenu
+        android:id="@+id/circle_menu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+<!-- ************************************************** -->
+    <FrameLayout
+        android:id="@+id/seekArcContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="20dp"
+        android:paddingTop="20dp" >
+
+
+        <com.triggertrap.seekarc.SeekArc
+            android:id="@+id/seekArc"
+            android:layout_width="wrap_content"
+            android:layout_height="200dp"
+            android:layout_gravity="center"
+            android:padding="30dp"
+            app:arcWidth="2dp"
+            app:progressWidth="4dp"
+            seekarc:arcColor="@android:color/darker_gray"
+            seekarc:clockwise="true"
+            seekarc:max="100"
+            seekarc:progressColor="#a6417e"
+            seekarc:startAngle="0"
+            seekarc:touchInside="true" />
+
+        <TextView
+            android:id="@+id/seekArcProgress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="0"
+            android:textColor="#EFE2E9"
+            android:textSize="50sp" />
+
+    </FrameLayout>
+
+<!-- ************************************************    -->
+
+
+
+</LinearLayout>
