@@ -1,5 +1,6 @@
 package com.jativa.ramiro.watercontroller;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.support.annotation.IdRes;
 import android.support.v7.app.AppCompatActivity;
@@ -64,6 +65,13 @@ public class MainActivity extends AppCompatActivity {
                     @Override
                     public void onMenuSelected(int index) {
                         Toast.makeText(MainActivity.this, "You selected "+arrayName[index], Toast.LENGTH_SHORT).show();
+
+                        if (index == 1) {
+                            Toast.makeText(MainActivity.this, "You selected again DHW " + arrayName[1], Toast.LENGTH_SHORT).show();
+                            //TextView dwh = (TextView) findViewById(R.id.dwh);
+                            Intent dwh = new Intent(MainActivity.this, DWHActivity.class);
+                            startActivity(dwh);
+                        };
                     }
                 });
 
