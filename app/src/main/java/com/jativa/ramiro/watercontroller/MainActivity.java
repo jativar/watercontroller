@@ -55,12 +55,12 @@ public class MainActivity extends AppCompatActivity {
 
         CircleMenu circleMenu = (CircleMenu) findViewById(R.id.circle_menu);
         // Set MainMenu and SubMenu
-        circleMenu.setMainMenu(Color.parseColor("#f44336"),R.drawable.ic_add,R.drawable.ic_remove)
-                .addSubMenu(Color.parseColor("#ea80fc"),R.drawable.ic_renewables)
-                .addSubMenu(Color.parseColor("#82b1ff"),R.drawable.ic_dhw)
-                .addSubMenu(Color.parseColor("#b39ddb"),R.drawable.ic_centralheating)
-                .addSubMenu(Color.parseColor("#ff9100"),R.drawable.ic_infoandengineering)
-                .addSubMenu(Color.parseColor("#64ffda"),R.drawable.ic_newdevelopments2017)
+        circleMenu.setMainMenu(Color.parseColor("#000000"),R.drawable.ic_add,R.drawable.ic_remove)
+                .addSubMenu(Color.parseColor("#000000"),R.drawable.ic_renewables)
+                .addSubMenu(Color.parseColor("#000000"),R.drawable.ic_dhw)
+                .addSubMenu(Color.parseColor("#000000"),R.drawable.ic_centralheating)
+                .addSubMenu(Color.parseColor("#000000"),R.drawable.ic_infoandengineering)
+                .addSubMenu(Color.parseColor("#000000"),R.drawable.ic_newdevelopments2017)
                 .setOnMenuSelectedListener(new OnMenuSelectedListener() {
                     @Override
                     public void onMenuSelected(int index) {
@@ -76,7 +76,7 @@ public class MainActivity extends AppCompatActivity {
                 });
 
 
-        /****************************/
+        /****************************
         mSeekArc = (SeekArc) findViewById(seekArc);
         mSeekArcProgress = (TextView) findViewById(R.id.seekArcProgress);
 
