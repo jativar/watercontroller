@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- activity_waterpump.xml -->
+
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:seekarc="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
@@ -19,12 +21,12 @@
         android:orientation="vertical"
         >
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="300dp"
-        android:textAlignment="center"
-        android:id="@+id/dwh"
-        android:background="@drawable/waterheaterstiebeleltronasia"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:textAlignment="center"
+            android:id="@+id/waterpump"
+            android:background="@drawable/waterpumpstiebeleltronasia"/>
 
         <FrameLayout
             android:id="@+id/seekArcContainer"
@@ -48,14 +50,14 @@
 
 
             <TextView
-                    android:id="@+id/seekArcProgress"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:text="0"
-                    android:textColor="@color/colorBlack"
-                    android:textSize="25sp"
-                    android:textStyle="bold"/>
+                android:id="@+id/seekArcProgress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="0"
+                android:textColor="@color/colorBlack"
+                android:textSize="25sp"
+                android:textStyle="bold"/>
 
         </FrameLayout>
 
@@ -84,16 +86,16 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="450dp"
-            android:text="@string/dwh_IL_SERIES"
+            android:text="@string/water_pump_STIEBEL_BOOST"
             android:textColor="@color/colorRed"
             android:fontFamily="sans-serif-condensed"
             android:textStyle="bold"
             android:textAlignment="center"
             android:textSize="60dp"
             android:gravity="center"
-            android:background="@drawable/waterheaterilseriesstiebeleltronasia"
+            android:background="@drawable/waterpumpstiebelbooststiebeleltronasia"
             />
 
-</LinearLayout>
+    </LinearLayout>
 </ScrollView>
 

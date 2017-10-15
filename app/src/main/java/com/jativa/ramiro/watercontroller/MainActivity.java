@@ -22,15 +22,16 @@ import com.hitomi.cmlibrary.OnMenuSelectedListener;
 import com.triggertrap.seekarc.SeekArc;
 import com.triggertrap.seekarc.SeekArc.OnSeekArcChangeListener;
 
+import static android.icu.lang.UCharacter.GraphemeClusterBreak.T;
 import static com.jativa.ramiro.watercontroller.R.id.seekArc;
 
 public class MainActivity extends AppCompatActivity {
 
     //Declare variables for CircleMenu
-    String arrayName[]={"Renewables",
+    String arrayName[]={"Water Filter",
                         "DHW",
-                        "Central heating",
-                        "Information & engineering",
+                        "Heat Pump",
+                        "Water Pump",
                         "New developments 2017"};
 
 
@@ -56,22 +57,72 @@ public class MainActivity extends AppCompatActivity {
         CircleMenu circleMenu = (CircleMenu) findViewById(R.id.circle_menu);
         // Set MainMenu and SubMenu
         circleMenu.setMainMenu(Color.parseColor("#000000"),R.drawable.ic_add,R.drawable.ic_remove)
-                .addSubMenu(Color.parseColor("#000000"),R.drawable.ic_renewables)
+                .addSubMenu(Color.parseColor("#000000"),R.drawable.ic_waterfilterstiebeleltronasia)
                 .addSubMenu(Color.parseColor("#000000"),R.drawable.ic_dhw)
-                .addSubMenu(Color.parseColor("#000000"),R.drawable.ic_centralheating)
-                .addSubMenu(Color.parseColor("#000000"),R.drawable.ic_infoandengineering)
-                .addSubMenu(Color.parseColor("#000000"),R.drawable.ic_newdevelopments2017)
+                .addSubMenu(Color.parseColor("#000000"),R.drawable.ic_heatpump)
+                .addSubMenu(Color.parseColor("#000000"),R.drawable.ic_waterpump)
+                .addSubMenu(Color.parseColor("#000000"),R.drawable.ic_handdryer)
                 .setOnMenuSelectedListener(new OnMenuSelectedListener() {
                     @Override
                     public void onMenuSelected(int index) {
-                        Toast.makeText(MainActivity.this, "You selected "+arrayName[index], Toast.LENGTH_SHORT).show();
+                        //Toast.makeText(MainActivity.this, "You selected "+arrayName[index], Toast.LENGTH_SHORT).show();
+
+                        if (index == 0) {
+                            // You selected Water Filter arrayName[0]
+                            //Toast.makeText(MainActivity.this, "You selected " + arrayName[0] , Toast.LENGTH_SHORT).show();
+
+                            Toast.makeText(MainActivity.this, "Innovative nano alumina fibers" , Toast.LENGTH_SHORT).show();
+
+                            Intent waterfilter = new Intent(MainActivity.this, waterfilterActivity.class);
+
+                            startActivity(waterfilter);
+
+                        };
 
                         if (index == 1) {
-                            Toast.makeText(MainActivity.this, "You selected again DHW " + arrayName[1], Toast.LENGTH_SHORT).show();
+                            // You selected Domestic Heat Water DHW
+                            //Toast.makeText(MainActivity.this, "You selected " + arrayName[1], Toast.LENGTH_SHORT).show();
                             //TextView dwh = (TextView) findViewById(R.id.dwh);
+
+                            Toast.makeText(MainActivity.this, "Earth Leakage Circuit Breaker", Toast.LENGTH_SHORT).show();
+
                             Intent dwh = new Intent(MainActivity.this, DWHActivity.class);
+
                             startActivity(dwh);
                         };
+
+                        if (index == 2) {
+                            // You selected Heat Pump that corresponds to arrayName[2]
+
+                            Toast.makeText(MainActivity.this, "Reduces energy costs", Toast.LENGTH_SHORT).show();
+
+                            Intent heatpump = new Intent(MainActivity.this, heatpumpActivity.class);
+
+                            startActivity(heatpump);
+                        };
+
+                        if (index == 3) {
+                            // You selected Water Pump that corresponds to arrayName[3]
+
+                            Toast.makeText(MainActivity.this, "Constant Pressure", Toast.LENGTH_SHORT).show();
+
+                            Intent waterpump = new Intent(MainActivity.this, waterpumpActivity.class);
+
+                            startActivity(waterpump);
+
+                        };
+
+                        if (index == 4) {
+                            // You selected Hand Dryer that corresponds to arrayName[4]
+
+                            Toast.makeText(MainActivity.this, "Award-winning European design", Toast.LENGTH_SHORT).show();
+
+                            Intent handdryer = new Intent(MainActivity.this, handdryerActivity.class);
+
+                            startActivity(handdryer);
+
+                        };
+
                     }
                 });
 

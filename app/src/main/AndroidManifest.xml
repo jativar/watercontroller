@@ -40,6 +40,10 @@
         </activity>
 
         <activity android:name=".DWHActivity"/>
+        <activity android:name=".waterfilterActivity"/>
+        <activity android:name=".heatpumpActivity"/>
+        <activity android:name=".waterpumpActivity"/>
+        <activity android:name=".handdryerActivity"/>
 
     </application>
 

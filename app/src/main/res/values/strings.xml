@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Stiebel Eltron Water Controller</string>
+    <string name="water_filter_nature">NATURE</string>
+    <string name="hand_dryer_HTE_4">HTE 4</string>
+    <string name="dwh_IL_SERIES">IL Series</string>
+    <string name="heat_pump_WWK_300">WWK 300</string>
+    <string name="water_pump_STIEBEL_BOOST">STIEBEL BOOST</string>
 </resources>
