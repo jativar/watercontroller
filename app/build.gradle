@@ -5,7 +5,12 @@ android {
     buildToolsVersion "25.0.2"
     defaultConfig {
         applicationId "com.jativa.ramiro.watercontroller"
-        minSdkVersion 15
+
+        // We need minSdk version 16 for the use of Croller.  SeekArc and Circle menu can be used with minSdkversion 15.
+        // so, we modified the minSdkversion 15 to be minSdkversion 16, in order to use Croller.
+        minSdkVersion 16
+
+
         targetSdkVersion 25
         versionCode 1
         versionName "1.0"
@@ -38,4 +43,8 @@ dependencies {
 
     //Add Library for CircleMenu
     compile 'com.github.Hitomis:CircleMenu:v1.0.2'
+
+    //Add library for Croller
+    compile 'com.github.harjot-oberai:Croller:v1.0.0'
+
 }

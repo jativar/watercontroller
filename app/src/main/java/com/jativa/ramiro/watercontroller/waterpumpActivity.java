@@ -7,6 +7,7 @@ import android.widget.CheckBox;
 import android.widget.SeekBar;
 import android.widget.TextView;
 
+import com.sdsmdg.harjot.crollerTest.Croller;
 import com.triggertrap.seekarc.SeekArc;
 
 
@@ -36,17 +37,23 @@ import com.triggertrap.seekarc.SeekArc;
         import android.widget.SeekBar;
         import android.widget.Switch;
         import android.widget.TextView;
+import android.widget.Toast;
 
-        import com.triggertrap.seekarc.SeekArc;
+import com.triggertrap.seekarc.SeekArc;
 
         import com.hitomi.cmlibrary.CircleMenu;
         import com.hitomi.cmlibrary.OnMenuSelectedListener;
         import com.triggertrap.seekarc.SeekArc;
         import com.triggertrap.seekarc.SeekArc.OnSeekArcChangeListener;
 
-        import static com.jativa.ramiro.watercontroller.R.id.seekArc;
+
+import static android.os.Build.VERSION_CODES.M;
+import static com.jativa.ramiro.watercontroller.R.id.seekArc;
 
         import static com.jativa.ramiro.watercontroller.R.id.seekArc;
+
+import com.sdsmdg.harjot.crollerTest.Croller.onProgressChangedListener;
+
 
 
 public class waterpumpActivity extends AppCompatActivity {
@@ -72,6 +79,14 @@ public class waterpumpActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_waterpump);
+        /*
+
+        Java Code for seekArc functionality.
+        We put in comment meanwhile we test the funcionality for Croller.
+         */
+
+
+
 
         mSeekArc = (SeekArc) findViewById(seekArc);
         mSeekArcProgress = (TextView) findViewById(R.id.seekArcProgress);
@@ -111,6 +126,20 @@ public class waterpumpActivity extends AppCompatActivity {
                 mSeekArcProgress.setText(String.valueOf(progress));
 
             }
+
+
+
+
         });
+
+
+
+
+
+
+
     }
 }
+
+
+
